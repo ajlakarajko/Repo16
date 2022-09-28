@@ -1,13 +1,14 @@
 // only change code below this line
 class Person {
-    constructor(name) {
-    this._name = name;
-    }
     static display() {
-    console.log("Statis method is invoked from Person class");
+        var message = "Static method is invoked from Person class";
+        return message;
+    }
+
+    show() {
+        console.log(Person.display());
     }
     }
-    Person.display();
 // Only change code above this line
 var message = new Person();
 message.show();

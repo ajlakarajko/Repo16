@@ -1,26 +1,31 @@
-// Only change code below this line
-
-
-class Student extends Person {
-    constructor(name, grade) {
-    super(name)
-    this.grade = grade;
+class Pets {
+    constructor(name, legs) {
+        this.name = name;
+        this.legs = legs;
     }
-    studentGrade() {
-    console.log(`${this._name} is ${this.grade}`);
+
+    walk() {
+        var numberOfLegs = `"${this.name} is walking on ${this.legs} legs"`;
+        return numberOfLegs;
     }
+}
+
+class Dog extends Pets {
+    constructor(name, legs) {
+        super(name, legs);
     }
-    const tesla = new Student("Tesla", 4);
-    tesla.occupation();
-    tesla.studentGrade();
 
+    bark() {
+        var dogSay = `"${this.name} says WUF-WUF"`;
+        return dogSay;
+    }
+}
 
-
-// Only change code above this line
-let dog = new Dog(name, legs); // Change this line
+const dog = new Dog("Pujdo", 4);
 console.log(dog.walk());
 console.log(dog.bark());
+
 module.exports = {
-Pets,
-Dog
-}
+    Pets,
+    Dog,
+};
